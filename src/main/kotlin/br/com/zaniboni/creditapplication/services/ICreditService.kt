@@ -1,0 +1,10 @@
+package br.com.zaniboni.creditapplication.services
+
+import br.com.zaniboni.creditapplication.entities.Credit
+import java.util.*
+
+interface ICreditService {
+    fun save(credit: Credit): Credit
+    fun findAllByCustomer(customerId: Long): List<Credit>
+    fun findByCreditCode(customerId: Long, creditCode: UUID): Credit
+}
